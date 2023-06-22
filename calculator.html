@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Goals-SH</title>
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+    body {
+      
+      min-height: 100vh;
+      font-family: mv boli;
+      background-color: white;
+    }
+    nav {
+      background-color: #fac031;
+      color: black;
+      width: 100%;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .calculator {
+      width: 400px;
+      padding: 40px;
+      background-color: #ffffff;
+      border: 0px solid #ccc;
+      border-radius: 20px;
+      margin-left: 450px;
+      margin-top: 80px;
+    }
+
+    .calculator h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .calculator form {
+      margin-bottom: 0;
+    }
+
+    .calculator label {
+      margin-bottom: 10px;
+    }
+
+    .calculator input,
+    .calculator select {
+      margin-bottom: 15px;
+      padding: 5px;
+      width: 100%;
+    }
+
+    .calculator button {
+      margin-top: 10px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body style="background-image: linear-gradient(to right, #c6ffdd, #fbd786, #c6ffdd);">
+  <nav>
+    <ul>
+      <li><a href="workout.html">Workout Sections</a></li>
+      <li><a href="result.html">Reports</a></li>
+      <li><a href="calculator.html">Goals</a></li>
+    </ul>
+  </nav>
+  <h2 style="position: relative;margin-left: 520px">Set goals based on your body!</h2>
+  <div class="calculator" style="font-weight:bold;position:relative;margin-right: 0px;background: black;color: #fac031">
+    <h1>Calorie Calculator</h1>
+    <form style="padding: 10px" action="result.html" method="GET">
+      <label for="weight">Weight (kg):</label>
+      <input style="border-radius: 10px;border: 0.5px solid black;color: black" type="number" id="weight" name="weight" required>
+ 
+
+      <label for="height">Height (cm):</label>
+      <input style="border-radius: 10px;border: 0.5px solid black" type="number" id="height" name="height" required>
+
+      <label for="goal">Weight Goal:</label>
+      <select id="goal" name="goal" style="color: black;font-family: mv boli;font-weight: bold;border-radius: 15px">
+        <option value="lose">Lose Weight</option>
+        <option value="maintain">Maintain Weight</option>
+        <option value="gain">Gain Weight</option>
+      </select>
+
+      <button type="submit" style="background: #fac031;border-radius:15px;border: 0px solid black;font-weight: bold ">Set</button>
+    </form>
+  </div>
+</body>
+</html>

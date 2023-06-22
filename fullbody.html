@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Routine</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .workout-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .workout-image {
+      max-width: 200px;
+    }
+
+    .workout-instructions {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function toggleInstructions(workoutId) {
+      var instructions = document.getElementById(workoutId + '-instructions');
+      instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+
+      if (instructions.style.display === 'block') {
+        startTimer();
+      }
+    }
+
+    function startTimer() {
+      var timer = document.getElementById('timer');
+      var timeLeft = 20;
+      timer.innerHTML = timeLeft;
+
+      var countdown = setInterval(function() {
+        timeLeft--;
+        timer.innerHTML = timeLeft;
+
+        if (timeLeft === 0) {
+          clearInterval(countdown);
+          timer.innerHTML = "Time's up!";
+          alert("Time's up! Great workout!");
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+   <div class="container">
+  <h1>Workout Routine</h1>
+
+  <div class="workout-section">
+    <h2>Jumping Jacks</h2>
+    <img class="workout-image" src="jumping_jacks.jpg" alt="Jumping Jacks Image">
+    <button onclick="toggleInstructions('jumping-jacks')">Show Instructions</button>
+    <div class="workout-instructions" id="jumping-jacks-instructions">
+      <p>Instructions for Jumping Jacks:</p>
+      <ol>
+        <li>Stand with your feet together and your arms by your sides.</li>
+        <li>In one motion, jump your feet out to the sides and raise your arms above your head.</li>
+        <li>Jump back to the starting position.</li>
+        <li>Repeat for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="workout-section">
+    <h2>Incline Pushups</h2>
+    <img class="workout-image" src="incline_pushups.jpg" alt="Incline Pushups Image">
+    <button onclick="toggleInstructions('incline-pushups')">Show Instructions</button>
+    <div class="workout-instructions" id="incline-pushups-instructions">
+      <p>Instructions for Incline Pushups:</p>
+      <ol>
+        <li>Find an elevated surface, such as a bench or step.</li>
+        <li>Place your hands slightly wider than shoulder-width apart on the surface.</li>
+        <li>Step your feet back into a plank position with your body forming a straight line.</li>
+        <li>Bend your elbows and lower your chest towards the surface.</li>
+        <li>Push back up to the starting position.</li>
+        <li>Repeat for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+
+ <div class="workout-section">
+    <h2>Knee Pushups</h2>
+    <img class="workout-image" src="knee_pushups.jpg" alt="Knee Pushups Image">
+    <button onclick="toggleInstructions('knee-pushups')">Show Instructions</button>
+    <div class="workout-instructions" id="knee-pushups-instructions">
+      <p>Instructions for Knee Pushups:</p>
+      <ol>
+        <li>Start on your hands and knees, with your hands slightly wider than shoulder-width apart.</li>
+        <li>Lower your upper body towards the floor by bending your elbows.</li>
+        <li>Keep your back straight and your knees on the ground.</li>
+        <li>Push back up to the starting position.</li>
+        <li>Repeat for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="workout-section">
+    <h2>Pushups</h2>
+    <img class="workout-image" src="pushups.jpg" alt="Pushups Image">
+    <button onclick="toggleInstructions('pushups')">Show Instructions</button>
+    <div class="workout-instructions" id="pushups-instructions">
+      <p>Instructions for Pushups:</p>
+      <ol>
+        <li>Start in a plank position with your hands slightly wider than shoulder-width apart.</li>
+        <li>Lower your body towards the floor by bending your elbows.</li>
+        <li>Keep your body straight and your core engaged.</li>
+        <li>Push back up to the starting position.</li>
+        <li>Repeat for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="workout-section">
+    <h2>Wide-Arm Pushups</h2>
+    <img class="workout-image" src="widearm_pushups.jpg" alt="Wide-Arm Pushups Image">
+    <button onclick="toggleInstructions('widearm-pushups')">Show Instructions</button>
+    <div class="workout-instructions" id="widearm-pushups-instructions">
+      <p>Instructions for Wide-Arm Pushups:</p>
+      <ol>
+        <li>Start in a plank position with your hands positioned wider than shoulder-width apart.</li>
+        <li>Lower your body towards the floor by bending your elbows.</li>
+        <li>Keep your body straight and your core engaged.</li>
+        <li>Push back up to the starting position.</li>
+        <li>Repeat for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="workout-section">
+    <h2>Cobra Stretch</h2>
+    <img class="workout-image" src="cobra_stretch.jpg" alt="Cobra Stretch Image">
+    <button onclick="toggleInstructions('cobra-stretch')">Show Instructions</button>
+    <div class="workout-instructions" id="cobra-stretch-instructions">
+      <p>Instructions for Cobra Stretch:</p>
+      <ol>
+        <li>Lie flat on your stomach with your hands positioned next to your shoulders.</li>
+        <li>Press your hands into the floor and lift your chest off the ground.</li>
+        <li>Keep your hips and legs relaxed.</li>
+        <li>Hold the stretch for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="workout-section">
+    <h2>Chest Stretch</h2>
+    <img class="workout-image" src="chest_stretch.jpg" alt="Chest Stretch Image">
+    <button onclick="toggleInstructions('chest-stretch')">Show Instructions</button>
+    <div class="workout-instructions" id="chest-stretch-instructions">
+      <p>Instructions for Chest Stretch:</p>
+      <ol>
+        <li>Stand tall with your feet shoulder-width apart.</li>
+        <li>Interlace your fingers behind your back with your palms facing inwards.</li>
+        <li>Squeeze your shoulder blades together and gently lift your arms.</li>
+        <li>Hold the stretch for the duration of the exercise.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3 id="timer">20</h3>
+ </div>
+</body>
+</html>

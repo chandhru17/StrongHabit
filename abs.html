@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Routine 3</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .workout-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .workout-image {
+      max-width: 200px;
+    }
+
+    .workout-instructions {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function toggleInstructions(workoutId) {
+      var instructions = document.getElementById(workoutId + '-instructions');
+      instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+
+      if (instructions.style.display === 'block') {
+        startTimer();
+      }
+    }
+
+    function startTimer() {
+      var timer = document.getElementById('timer');
+      var timeLeft = 20;
+      timer.innerHTML = timeLeft;
+
+      var countdown = setInterval(function() {
+        timeLeft--;
+        timer.innerHTML = timeLeft;
+
+        if (timeLeft === 0) {
+          clearInterval(countdown);
+          timer.innerHTML = "Time's up!";
+          alert("Time's up! Great workout!");
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Workout Routine 3</h1>
+
+    <div class="workout-section">
+      <h2>Jumping Jacks</h2>
+      <img class="workout-image" src="jumping_jacks.jpg" alt="Jumping Jacks Image">
+      <button onclick="toggleInstructions('jumping-jacks')">Show Instructions</button>
+      <div class="workout-instructions" id="jumping-jacks-instructions">
+        <p>Instructions for Jumping Jacks:</p>
+        <ol>
+          <li>Stand with your feet together and your arms by your sides.</li>
+          <li>In one motion, jump your feet out to the sides and raise your arms above your head.</li>
+          <li>Jump back to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Abdominal Crunches</h2>
+      <img class="workout-image" src="abdominal_crunches.jpg" alt="Abdominal Crunches Image">
+      <button onclick="toggleInstructions('abdominal-crunches')">Show Instructions</button>
+      <div class="workout-instructions" id="abdominal-crunches-instructions">
+        <p>Instructions for Abdominal Crunches:</p>
+        <ol>
+          <li>Lie on your back with your knees bent and feet flat on the floor.</li>
+          <li>Place your hands behind your head or across your chest.</li>
+          <li>Engage your core and lift your upper body off the floor, bringing your chest towards your knees.</li>
+          <li>Lower your upper body back down to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Russian Twist</h2>
+      <img class="workout-image" src="russian_twist.jpg" alt="Russian Twist Image">
+      <button onclick="toggleInstructions('russian-twist')">Show Instructions</button>
+      <div class="workout-instructions" id="russian-twist-instructions">
+        <p>Instructions for Russian Twist:</p>
+        <ol>
+          <li>Sit on the floor with your knees bent and feet flat on the ground.</li>
+          <li>Lean back slightly, keeping your back straight and core engaged.</li>
+          <li>Clasp your hands together in front of your chest or hold a weight.</li>
+          <li>Twist your torso to the right, bringing your clasped hands or weight towards the right side of your body.</li>
+          <li>Return to the center and then twist to the left side.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Mountain Climber</h2>
+      <img class="workout-image" src="mountain_climber.jpg" alt="Mountain Climber Image">
+      <button onclick="toggleInstructions('mountain-climber')">Show Instructions</button>
+      <div class="workout-instructions" id="mountain-climber-instructions">
+        <p>Instructions for Mountain Climber:</p>
+        <ol>
+          <li>Start in a push-up position with your hands directly under your shoulders and your body in a straight line.</li>
+          <li>Engage your core and bring one knee towards your chest, then quickly switch and bring the other knee forward.</li>
+          <li>Continue alternating the movement of your knees, as if you are running in place.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Heel Touch</h2>
+      <img class="workout-image" src="heel_touch.jpg" alt="Heel Touch Image">
+      <button onclick="toggleInstructions('heel-touch')">Show Instructions</button>
+      <div class="workout-instructions" id="heel-touch-instructions">
+        <p>Instructions for Heel Touch:</p>
+        <ol>
+          <li>Lie on your back with your knees bent and feet flat on the ground.</li>
+          <li>Extend your arms by your sides.</li>
+          <li>Crunch up and reach with your right hand towards your right heel.</li>
+          <li>Return to the starting position and repeat on the left side.</li>
+          <li>Continue alternating the movement, touching your heels with each hand.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Leg Raises</h2>
+      <img class="workout-image" src="leg_raises.jpg" alt="Leg Raises Image">
+      <button onclick="toggleInstructions('leg-raises')">Show Instructions</button>
+      <div class="workout-instructions" id="leg-raises-instructions">
+        <p>Instructions for Leg Raises:</p>
+        <ol>
+          <li>Lie on your back with your legs extended and your arms by your sides.</li>
+          <li>Engage your core and lift both legs off the ground, keeping them straight.</li>
+          <li>Lower your legs back down with control, without touching the ground.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Plank</h2>
+      <img class="workout-image" src="plank.jpg" alt="Plank Image">
+      <button onclick="toggleInstructions('plank')">Show Instructions</button>
+      <div class="workout-instructions" id="plank-instructions">
+        <p>Instructions for Plank:</p>
+        <ol>
+          <li>Start in a push-up position with your hands directly under your shoulders and your body in a straight line.</li>
+          <li>Lower yourself onto your forearms, keeping your elbows directly under your shoulders.</li>
+          <li>Engage your core and hold the position, keeping your body straight and avoiding any sagging or lifting of the hips.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Spine Lumbar Twist</h2>
+      <img class="workout-image" src="spine_lumbar_twist.jpg" alt="Spine Lumbar Twist Image">
+      <button onclick="toggleInstructions('spine-lumbar-twist')">Show Instructions</button>
+      <div class="workout-instructions" id="spine-lumbar-twist-instructions">
+        <p>Instructions for Spine Lumbar Twist:</p>
+        <ol>
+          <li>Sit on the floor with your legs extended in front of you.</li>
+          <li>Bend your right knee and cross your right foot over your left leg, placing it on the floor.</li>
+          <li>Place your left hand on your right knee and gently twist your torso to the right, looking over your right shoulder.</li>
+          <li>Hold the stretch for a few seconds, feeling the twist in your spine.</li>
+          <li>Switch sides and repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Cobra Stretch</h2>
+      <img class="workout-image" src="cobra_stretch.jpg" alt="Cobra Stretch Image">
+      <button onclick="toggleInstructions('cobra-stretch')">Show Instructions</button>
+      <div class="workout-instructions" id="cobra-stretch-instructions">
+        <p>Instructions for Cobra Stretch:</p>
+        <ol>
+          <li>Lie on your stomach with your legs extended and the tops of your feet flat on the ground.</li>
+          <li>Place your hands directly under your shoulders, fingers pointing forward.</li>
+          <li>Press through your hands and lift your chest off the ground, keeping your hips and legs relaxed.</li>
+          <li>Hold the stretch for a few seconds, feeling the gentle stretch in your abdomen and lower back.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="timer">20</div>
+  </div>
+</body>
+</html>

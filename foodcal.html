@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calorie Guide - Everyday Foods and Indian Food Items</title>
+  <link rel="icon" type="image/x-icon" href="C:\Users\ELCOT\Downloads\Food Website\Food Website\image/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: mv boli;
+      margin: 20px;
+      background-image: linear-gradient(to right, #c6ffdd, #fbd786, #c6ffdd);
+      
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background:#fac031;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-weight:bold;
+    }
+
+    th {
+      font:25px mv boli;
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color:#fac031;
+      background:black;
+    }
+  </style>
+  <script>
+    function searchFoodItems() {
+      var input = document.getElementById("searchInput").value.toUpperCase();
+      var table = document.getElementById("foodTable");
+      var rows = table.getElementsByTagName("tr");
+
+      for (var i = 0; i < rows.length; i++) {
+        var foodItem = rows[i].getElementsByTagName("td")[0];
+        if (foodItem) {
+          var foodItemText = foodItem.textContent || foodItem.innerText;
+          if (foodItemText.toUpperCase().indexOf(input) > -1) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1 style="color:black;">Calorie Guide - Everyday Foods and Indian Food Items</h1>
+
+  <h2>Everyday Foods</h2>
+
+  <input style="border-radius:10px;padding:10px;" type="text" id="searchInput" onkeyup="searchFoodItems()" placeholder="Search for a food item...">
+  
+  <table id="foodTable">
+    <tr>
+      <th>Food Item</th>
+      <th>Approximate Calories</th>
+    </tr>
+    <tr>
+      <td>Apple (medium-sized)</td>
+      <td>95 calories</td>
+    </tr>
+    <tr>
+      <td>Banana (medium-sized)</td>
+      <td>105 calories</td>
+    </tr>
+    <tr>
+      <td>Orange (medium-sized)</td>
+      <td>62 calories</td>
+    </tr>
+    <tr>
+      <td>Chicken breast (skinless, boneless, cooked)</td>
+      <td>165 calories per 3 ounces</td>
+    </tr>
+    <tr>
+      <td>Salmon (cooked)</td>
+      <td>206 calories per 3 ounces</td>
+    </tr>
+    <tr>
+      <td>Brown rice (cooked)</td>
+      <td>215 calories per cup</td>
+    </tr>
+    <tr>
+      <td>Whole wheat bread (1 slice)</td>
+      <td>80-100 calories, depending on the brand</td>
+    </tr>
+    <tr>
+      <td>Eggs (large, cooked)</td>
+      <td>78 calories per egg</td>
+    </tr>
+    <tr>
+      <td>Greek yogurt (plain, non-fat)</td>
+      <td>100 calories per 6 ounces</td>
+    </tr>
+    <tr>
+      <td>Almonds (raw, unsalted)</td>
+      <td>160 calories per ounce (about 23 almonds)</td>
+    </tr>
+    <tr>
+      <td>Spinach (raw)</td>
+      <td>7 calories per cup</td>
+    </tr>
+    <tr>
+      <td>Broccoli (steamed)</td>
+      <td>55 calories per cup</td>
+    </tr>
+    <tr>
+      <td>Carrots (raw)</td>
+      <td>52 calories per cup</td>
+    </tr>
+    <tr>
+      <td>Black beans (canned, drained and rinsed)</td>
+      <td>113 calories per half cup</td>
+    </tr>
+    <tr>
+      <td>Quinoa (cooked)</td>
+      <td>111 calories per half cup</td>
+    </tr>
+    <tr>
+      <td>Avocado (medium-sized)</td>
+      <td>234 calories</td>
+    </tr>
+    <tr>
+      <td>Strawberries (raw)</td>
+      <td>29 calories per cup</td>
+    </tr>
+    <tr>
+      <td>Oatmeal (cooked)</td>
+      <td>150 calories per half cup (unflavored)</td>
+    </tr>
+    <tr>
+      <td>Cottage cheese (low-fat)</td>
+      <td>104 calories per half cup</td>
+    </tr>
+    <tr>
+      <td>Sweet potato (baked)</td>
+      <td>100 calories per medium-sized potato</td>
+    </tr>
+    <tr>
+      <td>Chapati (Roti)</td>
+      <td>70-80 calories (per medium-sized chapati)</td>
+    </tr>
+    <tr>
+      <td>Basmati Rice (cooked)</td>
+      <td>150-200 calories (per cup)</td>
+    </tr>
+    <tr>
+      <td>Chicken Curry</td>
+      <td>250-300 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Vegetable Biryani</td>
+      <td>300-400 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Dal (Lentil Curry)</td>
+      <td>150-200 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Palak Paneer (Spinach and Cottage Cheese Curry)</td>
+      <td>250-300 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Aloo Gobi (Potato and Cauliflower Curry)</td>
+      <td>150-200 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Chole (Chickpea Curry)</td>
+      <td>250-300 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Samosa</td>
+      <td>250-300 calories (per piece)</td>
+    </tr>
+    <tr>
+      <td>Masoor Dal (Red Lentil Curry)</td>
+      <td>150-200 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Tandoori Chicken</td>
+      <td>150-200 calories (per serving, without skin)</td>
+    </tr>
+    <tr>
+      <td>Vegetable Pulao</td>
+      <td>250-300 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Butter Chicken</td>
+      <td>300-400 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Raita (Yogurt-based side dish)</td>
+      <td>50-100 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Papadum</td>
+      <td>50-70 calories (per piece)</td>
+    </tr>
+    <tr>
+      <td>Pani Puri (Golgappa)</td>
+      <td>20-30 calories (per piece)</td>
+    </tr>
+    <tr>
+      <td>Dosa (Plain)</td>
+      <td>100-150 calories (per piece)</td>
+    </tr>
+    <tr>
+      <td>Paneer Tikka</td>
+      <td>200-250 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Rajma (Kidney Bean Curry)</td>
+      <td>200-250 calories (per serving)</td>
+    </tr>
+    <tr>
+      <td>Gulab Jamun</td>
+      <td>150-200 calories (per piece)</td>
+    </tr>
+  </table>
+
+</body>
+</html>

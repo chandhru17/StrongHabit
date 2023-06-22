@@ -1,0 +1,58 @@
+const quotes = [
+  "Believe you can and you're halfway there",
+  "Don't watch the clock; do what it does. Keep going",
+  "The future belongs to those who believe in the beauty of their dreams",
+  "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts",
+  "The only way to do great work is to love what you do",
+  "Your time is limited, don't waste it living someone else's life",
+  "The future depends on what you do today",
+  "The only limit to our realization of tomorrow will be our doubts of today",
+  "Start where you are. Use what you have. Do what you can",
+  "The harder you work for something, the greater you'll feel when you achieve it",
+  "Success is not the key to happiness. Happiness is the key to success. If you love what you do, you will be successful",
+  "Believe in yourself, take on your challenges, dig deep within yourself to conquer fears. Never let anyone bring you down. You got this",
+  "You are never too old to set another goal or to dream a new dream",
+  "The only person you are destined to become is the person you decide to be",
+  "The future starts today, not tomorrow",
+  "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart",
+  "You are capable of more than you know",
+  "Believe in your dreams and they may come true. Believe in yourself and they will come true",
+  "Success is not in what you have, but who you are",
+  "Your dreams are the key to your success",
+  "Challenges are what make life interesting and overcoming them is what makes life meaningful",
+  "Take the first step in faith. You don't have to see the whole staircase, just take the first step",
+  "Believe in yourself, take on your challenges, and let your dreams guide you",
+  "Every day is a new beginning. Take a deep breath, smile, and start again",
+  "The biggest adventure you can take is to live the life of your dreams",
+  "Your only limit is you",
+  "Be the reason someone believes in the goodness of people",
+  "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle",
+  "Dream big, work hard, stay focused, and surround yourself with good people",
+  "The only time you should ever look back is to see how far you've come",
+  "Your dreams don't work unless you do",
+  "Be fearless in the pursuit of what sets your soul on fire",
+  "Your future is created by what you do today, not tomorrow",
+  "Believe in the power of your dreams",
+  "Success is not for the chosen few, but for the few who choose it",
+  "Every great dream begins with a dreamer",
+  "Hardships often prepare ordinary people for an extraordinary destiny",
+  "Be stronger than your excuses",
+  "Your attitude determines your direction",
+  "Believe you can and you're halfway there",
+  "Focus on the possibilities, not the limitations",
+  "Doubt kills more dreams than failure ever will",
+  "Believe in your ability to make things happen",
+  "The only way to do great work is to love what you do",
+  "Keep going, even when it gets tough",
+  "Every accomplishment starts with the decision to try",
+  "Make each day your masterpiece",
+  
+];
+
+
+function generateQuote() {
+  const quoteContainer = document.getElementById("quote-text");
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteContainer.textContent = quotes[randomIndex];
+}

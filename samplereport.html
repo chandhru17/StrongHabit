@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report-Sh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    #total-calories {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function calculateTotalCalories() {
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      var totalCalories = 0;
+
+      checkboxes.forEach(function (checkbox) {
+        var calories = parseFloat(checkbox.dataset.calories);
+        totalCalories += calories;
+      });
+
+      document.getElementById('total-calories').textContent = 'Total Calories Burnt: ' + totalCalories.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Track your details here!</h1>
+  <script>
+    // Get the weight, height, and goal parameters from the URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const weight = parseFloat(urlParams.get('weight'));
+    const height = parseFloat(urlParams.get('height'));
+    const goal = urlParams.get('goal');
+
+    // Calorie factors based on weight goal
+    let calorieFactor;
+    if (goal === 'lose') {
+      calorieFactor = 5;
+    } else if (goal === 'maintain') {
+      calorieFactor = 10;
+    } else if (goal === 'gain') {
+      calorieFactor = 15;
+    }
+
+    // Calculate calories needed
+    const caloriesNeeded = weight * calorieFactor;
+
+    // Display the result
+    document.write('<p>Calories to burn: ' + caloriesNeeded.toFixed(2) + '</p>');
+  </script>
+  <ul>
+    <li>
+      <input type="checkbox" id="exercise1" name="exercise1" data-calories="100" onclick="calculateTotalCalories()">
+      <label for="exercise1">Jumping jacks (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise2" name="exercise2" data-calories="150" onclick="calculateTotalCalories()">
+      <label for="exercise2">Pushups (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise3" name="exercise3" data-calories="200" onclick="calculateTotalCalories()">
+      <label for="exercise3">Chest stretch  (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise4" name="exercise4" data-calories="120" onclick="calculateTotalCalories()">
+      <label for="exercise4">Plank (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise5" name="exercise5" data-calories="180" onclick="calculateTotalCalories()">
+      <label for="exercise5">Crunches (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise6" name="exercise6" data-calories="90" onclick="calculateTotalCalories()">
+      <label for="exercise6">Squats (90 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise7" name="exercise7" data-calories="160" onclick="calculateTotalCalories()">
+      <label for="exercise7">Side lying leg lift (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise8" name="exercise8" data-calories="140" onclick="calculateTotalCalories()">
+      <label for="exercise8">Backward lunge (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise9" name="exercise9" data-calories="110" onclick="calculateTotalCalories()">
+      <label for="exercise9">Donkey kicks (110 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Abdominal crunches (30 calories)</label>
+    </li>
+     <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Knee pushups (130 calories)</label>
+    </li>
+     <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Wide arm pushups (30 calories)</label>
+    </li>
+     <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Inclined pushups (30 calories)</label>
+    </li>
+     <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Chest stretch (30 calories)</label>
+    </li>
+     <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Mountain climbers (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Leg barbell curl (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Diagonal plank (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Wall pushups (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Inchworms (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Left quad stretch (30 calories)</label>
+    </li>
+    <li>
+      <input type="checkbox" id="exercise10" name="exercise10" data-calories="130" onclick="calculateTotalCalories()">
+      <label for="exercise10">Knee to chest stretch (30 calories)</label>
+    </li>
+  </ul>
+  <p id="total-calories">Total Calories Burnt: 0</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calorie Report</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .report {
+      margin-top: 20px;
+    }
+
+    #calorie-result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function fetchCalories() {
+      // Fetch the total calories to burn from goals.html
+      fetch('goals.html')
+        .then(response => response.text())
+        .then(data => {
+          // Extract the total calories to burn from the fetched data
+          var parser = new DOMParser();
+          var htmlDoc = parser.parseFromString(data, 'text/html');
+          var caloriesToBurn = htmlDoc.getElementById('calorie-result').textContent;
+
+          // Display the total calories to burn in report.html
+          document.getElementById('calorie-result').textContent = caloriesToBurn;
+        })
+        .catch(error => {
+          console.log('Error fetching calories:', error);
+        });
+    }
+
+    // Attach event listener to the fetch button
+    document.getElementById('fetch-button').addEventListener('click',FetchCalories );
+  </script>
+</head>
+<body>
+  <div class="report">
+    <h1>Calorie Report</h1>
+    <p>Total calories to burn:</p>
+    <div id="calorie-result"></div>
+    <button id="fetch-button">Fetch Calories</button>
+  </div>
+</body>
+</html>

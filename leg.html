@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Routine 2</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .workout-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .workout-image {
+      max-width: 200px;
+    }
+
+    .workout-instructions {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function toggleInstructions(workoutId) {
+      var instructions = document.getElementById(workoutId + '-instructions');
+      instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+
+      if (instructions.style.display === 'block') {
+        startTimer();
+      }
+    }
+
+    function startTimer() {
+      var timer = document.getElementById('timer');
+      var timeLeft = 20;
+      timer.innerHTML = timeLeft;
+
+      var countdown = setInterval(function() {
+        timeLeft--;
+        timer.innerHTML = timeLeft;
+
+        if (timeLeft === 0) {
+          clearInterval(countdown);
+          timer.innerHTML = "Time's up!";
+          alert("Time's up! Great workout!");
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Workout Routine 2</h1>
+
+    <div class="workout-section">
+      <h2>Jumping Jacks</h2>
+      <img class="workout-image" src="jumping_jacks.jpg" alt="Jumping Jacks Image">
+      <button onclick="toggleInstructions('jumping-jacks')">Show Instructions</button>
+      <div class="workout-instructions" id="jumping-jacks-instructions">
+        <p>Instructions for Jumping Jacks:</p>
+        <ol>
+          <li>Stand with your feet together and your arms by your sides.</li>
+          <li>In one motion, jump your feet out to the sides and raise your arms above your head.</li>
+          <li>Jump back to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Squats</h2>
+      <img class="workout-image" src="squats.jpg" alt="Squats Image">
+      <button onclick="toggleInstructions('squats')">Show Instructions</button>
+      <div class="workout-instructions" id="squats-instructions">
+        <p>Instructions for Squats:</p>
+        <ol>
+          <li>Stand with your feet shoulder-width apart and toes slightly turned out.</li>
+          <li>Bend your knees and lower your hips as if sitting back into a chair.</li>
+          <li>Keep your chest up and core engaged.</li>
+          <li>Push through your heels to stand back up.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Side Lying Leg Lift</h2>
+      <img class="workout-image" src="side_lying_leg_lift.jpg" alt="Side Lying Leg Lift Image">
+      <button onclick="toggleInstructions('side-lying-leg-lift')">Show Instructions</button>
+      <div class="workout-instructions" id="side-lying-leg-lift-instructions">
+        <p>Instructions for Side Lying Leg Lift:</p>
+        <ol>
+          <li>Lie on your side with your legs extended and stacked on top of each other.</li>
+          <li>Rest your head on your arm or use a pillow for support.</li>
+          <li>Engage your core and lift the top leg towards the ceiling.</li>
+          <li>Lower the leg back down with control.</li>
+          <li>Repeat for the duration of the exercise and switch sides.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Backward Lunge</h2>
+      <img class="workout-image" src="backward_lunge.jpg" alt="Backward Lunge Image">
+      <button onclick="toggleInstructions('backward-lunge')">Show Instructions</button>
+      <div class="workout-instructions" id="backward-lunge-instructions">
+        <p>Instructions for Backward Lunge:</p>
+        <ol>
+          <li>Stand with your feet hip-width apart and your hands on your hips.</li>
+          <li>Take a step backward with your right foot.</li>
+          <li>Bend both knees to lower your body into a lunge position.</li>
+          <li>Push through your front heel to return to the starting position.</li>
+          <li>Repeat for the duration of the exercise and switch legs.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Donkey Kicks</h2>
+      <img class="workout-image" src="donkey_kicks.jpg" alt="Donkey Kicks Image">
+      <button onclick="toggleInstructions('donkey-kicks')">Show Instructions</button>
+      <div class="workout-instructions" id="donkey-kicks-instructions">
+        <p>Instructions for Donkey Kicks:</p>
+        <ol>
+          <li>Start on all fours with your hands directly under your shoulders and knees under your hips.</li>
+          <li>Engage your core and lift one leg, keeping it bent at a 90-degree angle.</li>
+          <li>Extend the leg back and up, squeezing your glutes.</li>
+          <li>Lower the leg back down with control.</li>
+          <li>Repeat for the duration of the exercise and switch legs.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Knee-to-Chest Stretch</h2>
+      <img class="workout-image" src="knee_to_chest_stretch.jpg" alt="Knee-to-Chest Stretch Image">
+      <button onclick="toggleInstructions('knee-to-chest-stretch')">Show Instructions</button>
+      <div class="workout-instructions" id="knee-to-chest-stretch-instructions">
+        <p>Instructions for Knee-to-Chest Stretch:</p>
+        <ol>
+          <li>Lie on your back with your legs extended.</li>
+          <li>Bend one knee and hug it towards your chest.</li>
+          <li>Hold the stretch for a few seconds, feeling the gentle stretch in your lower back and hip.</li>
+          <li>Switch legs and repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Left Quad Stretch</h2>
+      <img class="workout-image" src="left_quad_stretch.jpg" alt="Left Quad Stretch Image">
+      <button onclick="toggleInstructions('left-quad-stretch')">Show Instructions</button>
+      <div class="workout-instructions" id="left-quad-stretch-instructions">
+        <p>Instructions for Left Quad Stretch:</p>
+        <ol>
+          <li>Stand tall with your feet hip-width apart.</li>
+          <li>Bend your left knee and grab your left foot or ankle with your left hand.</li>
+          <li>Pull your left heel towards your glutes, feeling a stretch in the front of your left thigh.</li>
+          <li>Hold the stretch for a few seconds and release.</li>
+          <li>Switch legs and repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="workout-section">
+  <h2>Side Hop</h2>
+  <img class="workout-image" src="side_hop.jpg" alt="Side Hop Image">
+  <button onclick="toggleInstructions('side-hop')">Show Instructions</button>
+  <div class="workout-instructions" id="side-hop-instructions">
+    <p>Instructions for Side Hop:</p>
+    <ol>
+      <li>Stand with your feet together and your arms by your sides.</li>
+      <li>Jump to the right, extending your right leg out to the side and swinging your left arm across your body.</li>
+      <li>Land softly on your right foot and bring your left foot back to the starting position.</li>
+      <li>Repeat on the left side.</li>
+      <li>Continue alternating sides for the duration of the exercise.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="workout-section">
+  <h2>Sumo Squat Calf Raise</h2>
+  <img class="workout-image" src="sumo_squat_calf_raise.jpg" alt="Sumo Squat Calf Raise Image">
+  <button onclick="toggleInstructions('sumo-squat-calf-raise')">Show Instructions</button>
+  <div class="workout-instructions" id="sumo-squat-calf-raise-instructions">
+    <p>Instructions for Sumo Squat Calf Raise:</p>
+    <ol>
+      <li>Stand with your feet wider than shoulder-width apart and toes turned outwards.</li>
+      <li>Lower your body into a sumo squat position by bending your knees and pushing your hips back.</li>
+      <li>Rise up onto the balls of your feet, lifting your heels off the ground.</li>
+      <li>Lower your heels back down to the ground.</li>
+      <li>Repeat for the duration of the exercise.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="workout-section">
+  <h2>Calf Stretch</h2>
+  <img class="workout-image" src="calf_stretch.jpg" alt="Calf Stretch Image">
+  <button onclick="toggleInstructions('calf-stretch')">Show Instructions</button>
+  <div class="workout-instructions" id="calf-stretch-instructions">
+    <p>Instructions for Calf Stretch:</p>
+    <ol>
+      <li>Stand facing a wall or sturdy object.</li>
+      <li>Place your hands on the wall at shoulder height.</li>
+      <li>Step back with one foot and keep it straight, while bending the front knee.</li>
+      <li>Press your back heel down towards the ground, feeling a stretch in your calf muscle.</li>
+      <li>Hold the stretch for the duration of the exercise.</li>
+      <li>Repeat on the other leg.</li>
+    </ol>
+  </div>
+</div>
+
+
+    <div id="timer">20</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Routine</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .workout-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .workout-image {
+      max-width: 200px;
+    }
+
+    .workout-instructions {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function toggleInstructions(workoutId) {
+      var instructions = document.getElementById(workoutId + '-instructions');
+      instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+
+      if (instructions.style.display === 'block') {
+        startTimer();
+      }
+    }
+
+    function startTimer() {
+      var timer = document.getElementById('timer');
+      var timeLeft = 20;
+      timer.innerHTML = timeLeft;
+
+      var countdown = setInterval(function() {
+        timeLeft--;
+        timer.innerHTML = timeLeft;
+
+        if (timeLeft === 0) {
+          clearInterval(countdown);
+          timer.innerHTML = "Time's up!";
+          alert("Time's up! Great workout!");
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Workout Routine</h1>
+
+    <div class="workout-section">
+      <h2>Jumping Jacks</h2>
+      <img class="workout-image" src="jumping_jacks.jpg" alt="Jumping Jacks Image">
+      <button onclick="toggleInstructions('jumping-jacks')">Show Instructions</button>
+      <div class="workout-instructions" id="jumping-jacks-instructions">
+        <p>Instructions for Jumping Jacks:</p>
+        <ol>
+          <li>Stand with your feet together and your arms by your sides.</li>
+          <li>In one motion, jump your feet out to the sides and raise your arms above your head.</li>
+          <li>Jump back to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Chest Press Pulse</h2>
+      <img class="workout-image" src="chest_press_pulse.jpg" alt="Chest Press Pulse Image">
+      <button onclick="toggleInstructions('chest-press-pulse')">Show Instructions</button>
+      <div class="workout-instructions" id="chest-press-pulse-instructions">
+        <p>Instructions for Chest Press Pulse:</p>
+        <ol>
+          <li>Lie flat on your back on a bench or mat with your knees bent and feet flat on the floor.</li>
+          <li>Hold a dumbbell in each hand and extend your arms straight up over your chest.</li>
+          <li>Lower the dumbbells towards your chest, keeping your elbows slightly bent.</li>
+          <li>Push the dumbbells back up to the starting position, squeezing your chest muscles at the top.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Leg Barbell Curl</h2>
+      <img class="workout-image" src="leg_barbell_curl.jpg" alt="Leg Barbell Curl Image">
+      <button onclick="toggleInstructions('leg-barbell-curl')">Show Instructions</button>
+      <div class="workout-instructions" id="leg-barbell-curl-instructions">
+        <p>Instructions for Leg Barbell Curl:</p>
+        <ol>
+          <li>Stand with your feet shoulder-width apart and hold a barbell behind your legs.</li>
+          <li>Keeping your upper body stationary, curl the barbell up towards your buttocks by contracting your hamstrings.</li>
+          <li>Lower the barbell back down to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Diagonal Plank</h2>
+      <img class="workout-image" src="diagonal_plank.jpg" alt="Diagonal Plank Image">
+      <button onclick="toggleInstructions('diagonal-plank')">Show Instructions</button>
+      <div class="workout-instructions" id="diagonal-plank-instructions">
+        <p>Instructions for Diagonal Plank:</p>
+        <ol>
+          <li>Start in a plank position with your forearms on the ground and your body in a straight line.</li>
+          <li>Rotate your hips to the right and lift your right arm off the ground, extending it towards the ceiling.</li>
+          <li>Hold for a moment and then return to the starting position.</li>
+          <li>Repeat on the left side.</li>
+          <li>Alternate sides for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Wall Pushups</h2>
+      <img class="workout-image" src="wall_pushups.jpg" alt="Wall Pushups Image">
+      <button onclick="toggleInstructions('wall-pushups')">Show Instructions</button>
+      <div class="workout-instructions" id="wall-pushups-instructions">
+        <p>Instructions for Wall Pushups:</p>
+        <ol>
+          <li>Stand facing a wall with your arms extended and your hands placed on the wall at shoulder height.</li>
+          <li>Step back slightly and position your feet shoulder-width apart.</li>
+          <li>Bend your elbows and lean your body towards the wall, keeping your back straight.</li>
+          <li>Push back to the starting position.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="workout-section">
+      <h2>Inchworms</h2>
+      <img class="workout-image" src="inchworms.jpg" alt="Inchworms Image">
+      <button onclick="toggleInstructions('inchworms')">Show Instructions</button>
+      <div class="workout-instructions" id="inchworms-instructions">
+        <p>Instructions for Inchworms:</p>
+        <ol>
+          <li>Stand tall with your feet hip-width apart.</li>
+          <li>Bend forward at the waist and place your hands on the floor in front of you.</li>
+          <li>Walk your hands forward until you are in a plank position.</li>
+          <li>Take small steps with your feet to walk your hands back towards your feet.</li>
+          <li>Repeat for the duration of the exercise.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
