@@ -35,12 +35,12 @@ To get a local copy up and running, follow these simple steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/fitness-tracking-web-app.git
+    git clone https://github.com/chandhru17/StrongHabit.git
     ```
 
 2. **Navigate to the project directory:**
     ```bash
-    cd fitness-tracking-web-app
+    cd StrongHabit
     ```
 
 3. **Open the `index.html` file in your preferred browser to view the application.**
@@ -58,6 +58,8 @@ To get a local copy up and running, follow these simple steps:
 
 4. **Track Calories Burnt:**
    - Use the calculator to estimate calories burnt during your exercises and track your progress.
+  
+      
 
 
 
